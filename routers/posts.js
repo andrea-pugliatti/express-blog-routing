@@ -1,9 +1,11 @@
 const express = require("express");
+const postsList = require("../posts");
 const router = express.Router();
 
 // Index
 router.get("/", (req, res) => {
-	res.send("Lista dei post");
+	// res.send("Lista dei post");
+	res.json(postsList);
 });
 
 // Show
