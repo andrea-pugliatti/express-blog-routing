@@ -10,7 +10,8 @@ router.get("/", (req, res) => {
 
 // Show
 router.get("/:id", (req, res) => {
-	res.send(`Visualizzazione post: ${req.params.id}`);
+	// res.send(`Visualizzazione post: ${req.params.id}`);
+	res.json(postsList.find((item) => item.id === Number(req.params.id)));
 });
 
 // Store
